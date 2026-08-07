@@ -263,6 +263,7 @@ a { color: inherit; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: end;
+  padding-inline: clamp(1.5rem, 6vw, 5rem);
   background: var(--ink);
   color: var(--white);
 }
