@@ -1,46 +1,47 @@
-# Monument Apps website
+# Monument Apps
 
-Static website for Monument Apps LLC, intended for GitHub Pages at `https://monumentapps.com`.
+Public website for Monument Apps, LLC at [monumentapps.com](https://monumentapps.com).
 
-## Preview locally
+The site is plain HTML and CSS with no framework, dependencies, or build step. GitHub Pages serves it directly from the root of the `main` branch.
 
-From this directory, run:
+## Local preview
 
 ```sh
 python3 -m http.server 8000
 ```
 
-Then open <http://localhost:8000>. The site uses only HTML and CSS; there is no build step or dependency install.
+Open <http://localhost:8000>.
 
-## Create and push the GitHub repository
+## Deployment
 
-After creating an empty repository in the Monument Apps organization, push this repository:
+Changes deploy automatically after they are pushed to `main`:
 
 ```sh
-gh auth login
-gh repo create Monument-Apps/monumentapps.github.io --public --source=. --remote=origin --push
+git push origin main
 ```
 
-If the organization slug differs from its display name, replace `Monument-Apps` with the exact GitHub organization name. If the remote already exists, use `git push -u origin main` instead.
+GitHub Pages is configured to publish from `main` and `/ (root)`. The root `CNAME` file assigns the custom domain `monumentapps.com`.
 
-## Enable GitHub Pages
+## Site structure
 
-In the repository, open **Settings → Pages**, choose **Deploy from a branch**, select `main` and the `/ (root)` folder, then save. GitHub will publish the site from the repository root.
+```text
+index.html              Home page and app listings
+privacy/index.html      Privacy Policy
+terms/index.html        Terms of Service
+cookies/index.html      Cookie Policy
+assets/styles.css       Shared site styles
+assets/monument-apps-logo.png
+assets/favicon.png
+```
 
-## Custom domain and DNS
+## Add or update an app
 
-The included `CNAME` file requests `monumentapps.com`. In **Settings → Pages → Custom domain**, enter `monumentapps.com` and enable HTTPS after DNS is working.
+App cards live in the `.app-grid` section of `index.html`. Copy an existing `<article class="app-card">` block and update its category, name, description, status, and destination. Apps that are not available should remain unlinked and clearly marked `Coming Soon`.
 
-Verify GitHub’s current custom-domain documentation before changing DNS. Typically, the apex domain uses `A` records for GitHub Pages’ published IP addresses, while `www` uses a `CNAME` pointing to `Monument-Apps.github.io` (use the exact organization/repository hostname shown by GitHub). Keep any existing mail-related records intact.
+## Legal content
 
-## Add another app
+Approved policies are stored directly in their respective HTML pages. Preserve the shared header, footer, and `.legal` layout when updating policy text.
 
-Copy the `<article class="app-card">…</article>` block in `index.html`, update its name, description, category, status, and destination. Keep unreleased apps visibly marked as “Coming Soon” and do not link to unavailable destinations.
+## Domain configuration
 
-## Legal policies
-
-Replace the marked `LEGAL CONTENT TO BE INSERTED HERE` block and `[DATE TO BE INSERTED]` in `privacy/index.html`, `terms/index.html`, and `cookies/index.html` with the approved policy text.
-
-## Logo and favicon
-
-The supplied square logo is included at `assets/monument-apps-logo.png`. The header hides the image automatically if it is not present and falls back to the text brand. A 64×64 favicon derived from the same artwork is included at `assets/favicon.png`.
+The apex domain uses GitHub Pages A records, and `www` is a CNAME to `monumentapps.github.io`. Preserve all email-related DNS records when making domain changes. HTTPS is managed through the repository’s **Settings → Pages** screen.
