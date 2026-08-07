@@ -43,4 +43,4 @@ Replace the marked `LEGAL CONTENT TO BE INSERTED HERE` block and `[DATE TO BE IN
 
 ## Logo and favicon
 
-Add the final logo at `assets/monument-apps-logo.png`. The header hides the image automatically if it is not present and falls back to the text brand. A small inline SVG favicon placeholder is included at `assets/favicon.svg`; replace it there or update the favicon links when a final icon is available.
+The supplied square logo is included at `assets/monument-apps-logo.png`. The header hides the image automatically if it is not present and falls back to the text brand. A 64×64 favicon derived from the same artwork is included at `assets/favicon.png`.
