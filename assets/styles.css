@@ -337,8 +337,6 @@ a { color: inherit; }
   .header-inner { min-height: 4.75rem; }
 
   .wordmark strong { font-size: .9rem; }
-  .wordmark small { display: none; }
-
   .header-inner nav { gap: .9rem; }
 
   .hero {
