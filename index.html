@@ -3,9 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Monument Apps is an independent software studio building simple, useful apps.">
+  <meta name="description" content="Monument Apps is an independent software studio designing focused, honest apps for web and mobile.">
   <title>Monument Apps — Independent software studio</title>
   <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Inter:wght@400;500;550;600;650&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
@@ -14,14 +17,63 @@
     <nav aria-label="Primary navigation"><a href="#apps">Apps</a><a href="#contact">Contact</a></nav>
   </div></header>
   <main>
-    <section class="hero container"><div class="hero-copy"><p class="eyebrow">Independent software publisher</p><h1>Apps worth keeping.</h1><p class="lede">Focused products for web and mobile, thoughtfully made and built to be useful.</p><a class="hero-link" href="#apps">Explore our apps <span aria-hidden="true">↓</span></a></div><div class="hero-visual"><img src="assets/monument-apps-logo.png" alt="Illustration of a monument rising above green hills under a blue sky"></div></section>
-    <section class="section container" id="apps"><div class="section-heading"><p class="eyebrow">Our apps</p><h2>Products in progress.</h2></div>
-      <div class="app-grid">
-        <article class="app-card"><div><p class="app-kicker">Social · Web &amp; mobile</p><h3>UpTo</h3><p>See what your friends are UpTo. No ads, no algorithms, no influencers.</p></div><div class="app-meta"><span class="status">Coming Soon</span><span class="app-link" aria-label="UpTo is coming soon">upto.monumentapps.com</span></div></article>
-        <article class="app-card"><div><p class="app-kicker">Productivity · Web</p><h3>StudioTrackr</h3><p>Easily manage studio projects without the whiteboards and spreadsheets.</p></div><div class="app-meta"><span class="status">Coming Soon</span><span class="app-link" aria-label="StudioTrackr is coming soon">studiotrackr.com</span></div></article>
+    <section class="hero">
+      <img class="hero-photo" src="assets/hero-photo.jpg" alt="">
+      <div class="hero-scrim" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Independent software studio</p>
+          <h1>Small studio.<br>Sharp <em>apps.</em></h1>
+          <p class="lede">Monument Apps designs focused tools for web and mobile — built around a real problem, not a growth metric. No dark patterns, no bloat, no algorithm deciding what you see.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#apps">Explore our apps</a>
+            <a class="btn btn-ghost" href="#contact">Say hello</a>
+          </div>
+        </div>
       </div>
     </section>
-    <section class="section contact container" id="contact"><div><p class="eyebrow">Contact</p><h2>Say hello.</h2></div><p><a class="email" href="mailto:hello@monumentapps.com">hello@monumentapps.com</a></p></section>
+
+    <section class="pillars"><div class="container pillar-grid">
+      <div class="pillar"><span class="num">01</span><h3>Built with intent</h3><p>Every product starts from a problem we've actually felt, not a metric we're chasing.</p></div>
+      <div class="pillar"><span class="num">02</span><h3>Privacy by default</h3><p>We collect what's needed to run the product. Nothing gets sold, and nothing gets tracked for fun.</p></div>
+      <div class="pillar"><span class="num">03</span><h3>Made to last</h3><p>Small, deliberate releases over feature sprawl — software that's still useful a year from now.</p></div>
+    </div></section>
+
+    <section class="section container" id="apps">
+      <div class="section-heading">
+        <p class="eyebrow">Our apps</p>
+        <h2>Two apps, in the open.</h2>
+        <p class="lede">Everything we're building right now, before it ships.</p>
+      </div>
+      <div class="app-grid">
+        <article class="app-card">
+          <div>
+            <div class="icon icon-upto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12h8M8 16h5M7 4h10a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-4 4V6a2 2 0 0 1 2-2Z"/></svg></div>
+            <p class="app-kicker">Social · Web &amp; mobile</p>
+            <h3>UpTo</h3>
+            <p class="desc">See what your friends are UpTo. No ads, no algorithms, no influencers.</p>
+          </div>
+          <div class="app-meta"><span class="status">Coming soon</span><span class="app-link" aria-label="UpTo is coming soon">upto.monumentapps.com</span></div>
+        </article>
+        <article class="app-card">
+          <div>
+            <div class="icon icon-studiotrackr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="7" height="7" rx="1.5"/><rect x="14" y="4" width="7" height="16" rx="1.5"/><rect x="3" y="14" width="7" height="6" rx="1.5"/></svg></div>
+            <p class="app-kicker">Music Productivity · Web &amp; mobile</p>
+            <h3>StudioTrackr</h3>
+            <p class="desc">Manage recording studio projects without whiteboards, spreadsheets, or busywork.</p>
+          </div>
+          <div class="app-meta"><span class="status">Coming soon</span><span class="app-link" aria-label="StudioTrackr is coming soon">studiotrackr.com</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact"><div class="container contact-inner">
+      <div><p class="eyebrow">Contact</p><h2>Say hello.</h2><p class="lede">Questions, feedback, or press — we read everything ourselves.</p></div>
+      <div class="contact-right">
+        <a class="email" href="mailto:hello@monumentapps.com">hello@monumentapps.com <span aria-hidden="true">→</span></a>
+        <p class="contact-note">We usually reply within a couple of days.</p>
+      </div>
+    </div></section>
   </main>
   <footer class="site-footer"><div class="container footer-inner"><span>© 2026 Monument Apps LLC</span><nav aria-label="Legal navigation"><a href="privacy/">Privacy</a><a href="terms/">Terms</a><a href="cookies/">Cookie Policy</a></nav></div></footer>
 </body>
