@@ -25,14 +25,28 @@ GitHub Pages is configured to publish from `main` and `/ (root)`. The root `CNAM
 ## Site structure
 
 ```text
-index.html              Home page and app listings
-privacy/index.html      Privacy Policy
-terms/index.html        Terms of Service
-cookies/index.html      Cookie Policy
-assets/styles.css       Shared site styles
+index.html                   Home page and app listings
+upto/index.html              UpTo product page
+privacy/index.html           Privacy Policy
+privacy/upto/index.html      UpTo Privacy Policy
+privacy/studiotrackr/index.html  StudioTrackr Privacy Policy
+terms/index.html             Terms of Service
+guidelines/index.html        Community Guidelines
+cookies/index.html           Cookie Policy
+assets/styles.css            Shared site styles
+assets/analytics.js          Analytics loader (skips legal pages)
 assets/monument-apps-logo.png
 assets/favicon.png
 ```
+
+### Product pages
+
+`upto/index.html` is the app's public home page, and Google OAuth verification depends on
+it. Google requires the app name on the OAuth consent screen to match the app name shown on
+the **Application home page** URL registered for the project, so that field points at
+`https://monumentapps.com/upto/` and the page leads with `UpTo` in its `<title>` and `<h1>`.
+Renaming the app, moving this page, or burying the name breaks verification — change the
+consent screen at the same time.
 
 ## Add or update an app
 
