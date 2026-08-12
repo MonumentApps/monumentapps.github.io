@@ -16,7 +16,14 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  /* Opt out of iOS text autosizing: on long text pages WebKit inflates type after first
+     layout, and a page that grows or shrinks under a restored scroll position strands the
+     viewport past the footer as a phantom void. */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
 
 body {
   margin: 0;
