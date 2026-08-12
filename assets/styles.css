@@ -743,3 +743,110 @@ a.app-link:hover { color: var(--green-dark); }
     gap: .75rem;
   }
 }
+
+/* UpTo product page: hero screenshot, store badges, coming-soon dialog */
+
+.product-hero-inner.with-shot {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+@media (max-width: 46rem) {
+  .product-hero-inner.with-shot { grid-template-columns: 1fr; }
+}
+
+.hero-promise {
+  margin: 1.1rem 0 0;
+  color: var(--sky-light);
+  font-weight: 650;
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+}
+
+.phone-shot img {
+  display: block;
+  width: 100%;
+  max-width: 19rem;
+  margin-inline: auto;
+  border-radius: 2.4rem;
+  border: 7px solid #101816;
+  box-shadow: 0 2rem 4rem rgba(0,0,0,.45);
+  background: #101816;
+}
+
+.store-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .9rem;
+  margin-top: 2.25rem;
+}
+
+.store-badge {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  padding: .55rem 1.15rem;
+  background: #000;
+  color: var(--white);
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: .85rem;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: transform .15s ease, border-color .15s ease;
+}
+
+.store-badge:hover { transform: translateY(-.1rem); border-color: rgba(255,255,255,.55); }
+
+.store-badge svg { width: 1.6rem; height: 1.6rem; flex: none; }
+
+.store-badge small {
+  display: block;
+  font-size: .62rem;
+  letter-spacing: .04em;
+  opacity: .8;
+}
+
+.store-badge strong {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.coming-soon {
+  max-width: 24rem;
+  padding: 2rem;
+  border: none;
+  border-radius: 1.25rem;
+  box-shadow: var(--shadow);
+}
+
+.coming-soon::backdrop { background: rgba(11,30,41,.55); }
+
+.coming-soon h3 {
+  margin: 0 0 .6rem;
+  font-family: Poppins, Inter, sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: -.02em;
+  color: var(--ink);
+}
+
+.coming-soon p { margin: 0 0 1.4rem; color: var(--muted); }
+
+.coming-soon-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+
+.coming-soon-actions .btn-ghost {
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+.coming-soon-actions .btn-ghost:hover { border-color: var(--muted); }
+
+.coming-soon-actions .btn-primary {
+  background: var(--green);
+  color: var(--white);
+}
+
+.coming-soon-actions .btn-primary:hover { background: var(--green-dark); }
